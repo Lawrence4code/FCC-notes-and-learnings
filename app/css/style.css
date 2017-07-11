@@ -1,2 +1,141 @@
-body {
-  background-color: red; }
+/* ------------------------------------------------------------------------*/
+/* BASIC SETUP */
+/* ------------------------------------------------------------------------*/
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0 auto; }
+
+html {
+  background-color: #fff;
+  font-family: 'Lato', 'Arial', san-serif;
+  font-size: 16px;
+  text-rendering: optimizeLegibility;
+  --webkit-text-smoothing: antialiased; }
+
+/* ------------------------------------------------------------------------*/
+/* REUSABLE COMPONENTS */
+/* ------------------------------------------------------------------------*/
+.row {
+  margin: 0 auto; }
+
+/* ------------------------------------------------------------------------*/
+/* HEADER */
+/* ------------------------------------------------------------------------*/
+/* -------------NAVBAR-------------*/
+.site-header {
+  background-image: url(/img/farm.jpg);
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  background-attachment: fixed; }
+  .site-header__menu-content {
+    display: none; }
+  .site-header__menu-content.open {
+    display: inline;
+    background-color: rgba(213, 199, 199, 0.2);
+    height: 130px; }
+  .site-header__menu-icon {
+    width: 40px;
+    height: 40px;
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+    -webkit-transition: .5s ease-in-out;
+    transition: .5s ease-in-out;
+    cursor: pointer;
+    z-index: 500; }
+  .site-header__menu-icon span {
+    display: block;
+    position: absolute;
+    height: 5px;
+    width: 100%;
+    background: #fff;
+    border-radius: 9px;
+    opacity: 1;
+    left: 0;
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+    -webkit-transition: .25s ease-in-out;
+    transition: .25s ease-in-out; }
+  .site-header__menu-icon span:nth-child(1) {
+    top: 0px;
+    -webkit-transform-origin: left center;
+            transform-origin: left center; }
+  .site-header__menu-icon span:nth-child(2) {
+    top: 15px;
+    -webkit-transform-origin: left center;
+            transform-origin: left center; }
+  .site-header__menu-icon span:nth-child(3) {
+    top: 30px;
+    -webkit-transform-origin: left center;
+            transform-origin: left center; }
+  .site-header__menu-icon.open span:nth-child(1) {
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+    top: 1px;
+    left: 8px; }
+  .site-header__menu-icon.open span:nth-child(2) {
+    width: 0%;
+    opacity: 0; }
+  .site-header__menu-icon.open span:nth-child(3) {
+    -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+    top: 29px;
+    left: 8px; }
+
+.mainNav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style-type: none;
+  height: 30px; }
+  .mainNav li {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding-right: 20px; }
+    .mainNav li a {
+      text-decoration: none;
+      color: white; }
+  .mainNav li:nth-child(5) {
+    display: none;
+    padding: 0;
+    margin: 0; }
+
+.site-logo {
+  display: block;
+  height: 4em;
+  background: red;
+  margin: auto 0; }
+
+.hero__box {
+  text-align: center;
+  color: #fff; }
+  .hero__box--title {
+    word-spacing: 1.5px; }
+
+/* -------------BUTTONS-------------*/
+.btn:link, .btn:visited {
+  display: inline-block;
+  padding: 15px 30px;
+  text-decoration: none;
+  border-radius: 3px;
+  -webkit-transition: background-color 0.3s, border 0.3s, color 0.3s;
+  transition: background-color 0.3s, border 0.3s, color 0.3s;
+  cursor: pointer; }
+
+.btn-hero:link, .btn-hero:visited {
+  background-color: #d65050;
+  border: 1px solid #d65050;
+  color: #fff;
+  margin-top: 40px;
+  font-size: 80%;
+  font-style: italic; }
+
+.btn-hero:hover, .btn-hero:active {
+  background-color: transparent;
+  border: 1px solid #d65050;
+  color: #d65050;
+  margin-top: 40px; }

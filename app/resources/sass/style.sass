@@ -1,2 +1,171 @@
-body
-  background-color: red
+// color: #555
+
+/* ------------------------------------------------------------------------*/
+/* BASIC SETUP */
+/* ------------------------------------------------------------------------*/
+
+*
+  padding: 0
+  margin: 0
+  box-sizing: border-box
+  margin: 0 auto
+
+html
+  background-color: #fff
+  font-family: 'Lato', 'Arial', san-serif
+  font-size: 16px
+  text-rendering: optimizeLegibility
+  --webkit-text-smoothing: antialiased
+
+/* ------------------------------------------------------------------------*/
+/* REUSABLE COMPONENTS */
+/* ------------------------------------------------------------------------*/
+
+.row
+  margin: 0 auto
+
+/* ------------------------------------------------------------------------*/
+/* HEADER */
+/* ------------------------------------------------------------------------*/
+
+
+/* -------------NAVBAR-------------*/
+
+
+// This is the point!
+.site-header
+  background-image: url(/img/farm.jpg)
+  background-size: cover
+  background-position: center
+  height: 100vh
+  background-attachment: fixed
+
+  &__menu-content
+      display: none
+
+
+
+
+  &__menu-content
+    &.open
+      display: inline
+      background-color: rgba(213, 199, 199,0.2)
+      height: 130px
+
+  &__menu-icon
+    width: 40px
+    height: 40px
+    transform: rotate(0deg)
+    transition: .5s ease-in-out
+    cursor: pointer
+    z-index: 500
+
+  &__menu-icon
+    & span
+      display: block
+      position: absolute
+      height: 5px
+      width: 100%
+      background: #fff
+      border-radius: 9px
+      opacity: 1
+      left: 0
+      transform: rotate(0deg)
+      transition: .25s ease-in-out
+
+    & span:nth-child(1)
+      top: 0px
+      transform-origin: left center
+
+    & span:nth-child(2)
+      top: 15px
+      transform-origin: left center
+
+    & span:nth-child(3)
+      top: 30px
+      transform-origin: left center
+
+    &.open
+      & span:nth-child(1)
+        transform: rotate(45deg)
+        top: 1px
+        left: 8px
+
+    &.open
+      & span:nth-child(2)
+        width: 0%
+        opacity: 0
+
+    &.open
+     & span:nth-child(3)
+      transform: rotate(-45deg)
+      top: 29px
+      left: 8px
+
+.mainNav
+  display: flex
+  list-style-type: none
+  height: 30px
+
+  & li
+    display: flex
+    padding-right: 20px
+    & a
+      text-decoration: none
+      color: white
+
+  // & li:nth-child(1)
+  //   padding-left: 0
+  //   margin-left: 0
+
+  & li:nth-child(5)
+    display: none
+    padding: 0
+    margin: 0
+
+.site-logo
+  display: block
+  height: 4em
+  background: red
+  margin: auto 0
+
+.hero__box
+  // position: absolute
+  // top: 50%
+  // left: 50%
+  // transform: translate(-50%, -50%)
+  text-align: center
+  color: #fff
+
+  &--title
+    word-spacing: 1.5px
+
+/* -------------BUTTONS-------------*/
+
+.btn
+  &:link,
+  &:visited
+    display: inline-block
+    padding: 15px 30px
+    text-decoration: none
+    border-radius: 3px
+    transition: background-color 0.3s, border 0.3s, color 0.3s
+    cursor: pointer
+
+.btn-hero
+  &:link,
+  &:visited
+    background-color: #d65050
+    border: 1px solid #d65050
+    color: #fff
+    margin-top: 40px
+    font-size: 80%
+    font-style: italic
+
+.btn-hero
+  &:hover,
+  &:active
+    background-color: transparent
+    border: 1px solid #d65050
+    color: #d65050
+    margin-top: 40px
