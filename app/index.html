@@ -9,39 +9,136 @@
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/grid.css">
   <link rel="stylesheet" href="css/ionicons.min.css" />
+  <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" />
   <link rel="stylesheet" href="css/style.css" />
   <link href="https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,700" rel="stylesheet" />
 </head>
 
 <body>
   <header class="site-header">
-        <nav class="navbar row">
-            <img class="site-logo" src="/img/logo.png" alt="Lawrence CODE Studio Logo">
+    <nav class="row">
+      <img class="site-logo" src="/img/logo-white.png" alt="Lawrence CODE Studio Logo">
 
-            <div class="site-header__menu-icon">
-              <span></span>
-              <span></span>
-              <span></span>
-            </div>
+      <div class="site-header__menu-icon">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
 
-            <div class="site-header__menu-content">
-              <ul class=mainNav>
-                <li class="home"> <a href="#"> Home </a> </li>
-                <li class="foundation"> <a href="#"> Foundation </a> </li>
-                <li class="services"> <a href="#"> Services </a> </li>
-                <li class="project"> <a href="#"> Projects </a> </li>
-                <li class="contact"> <a href="#"> Contact </a> </li>
-              </ul>
-            </div>
-        </nav>
+      <div class="site-header__menu-content">
+        <ul class=site-header__main-nav>
+          <li class="home"> <a href="#"> Home </a> </li>
+          <li class="foundation"> <a href="#"> Foundation </a> </li>
+          <li class="services"> <a href="#"> Services </a> </li>
+          <li class="project"> <a href="#"> Projects </a> </li>
+          <li class="contact"> <a href="#"> Contact </a> </li>
+        </ul>
+      </div>
+    </nav>
 
-        <div class="hero__box row">
-          <h1 class="hero__box--title"> <strong><i> Here... to fetch you the <span class="special-word">Best!</span> </i></strong> </h1>
-          <a class = "btn btn-hero" href="#"> Let's Talk </a>
+    <div class="hero__box">
+      <h1 class="hero__box--title"> <strong><i> Here... to fetch you the <span class="special-word">Best!</span> </i></strong> </h1>
+      <a class="btn btn-hero" href="#"> Let's Talk </a>
+    </div>
+  </header>
+
+  <section class="foundation">
+    <div class="row">
+      <h2 class="foundation-title"> BUILD STRONG BASEN ON...</h2>
+    </div>
+    <div class="foundation-section-text row">
+      <div class="col span-1-of-4 box">
+        <i class="ion-code-working icon-big"></i>
+        <h3 class="foundation-block-title"> Code </h3>
+        <p class="foundation-block-text">
+          Codes are the backbone of the website. A simple, clean and optimized code brings the website to Life.
+        </p>
+      </div>
+
+      <div class="col span-1-of-4 box">
+        <i class="ion-ios-pulse-strong icon-big"></i>
+        <h3 class="foundation-block-title"> Optimization </h3>
+        <p class="foundation-block-text">
+          Optimized Images and refactored codes with the updated Technology and Boost of SEO and secured flow of valuable information.
+        </p>
+      </div>
+
+      <div class="col span-1-of-4 box">
+        <i class="ion-compose icon-big"></i>
+        <h3 class="foundation-block-title"> Design </h3>
+        <p class="foundation-block-text">
+          The First impression. Design is not only how it looks but also how it works. The face of the website should talk to the user and make their Life easy when they are in web world.
+        </p>
+      </div>
+
+      <div class="col span-1-of-4 box">
+        <i class="ion-ios-heart icon-big"></i>
+        <h3 class="foundation-block-title"> Experience </h3>
+        <p class="foundation-block-text">
+          Website's flow and smoothness defines the user's engagement and that determines your Goal.
+        </p>
+      </div>
+    </div>
+  </section>
+  <h1 class="quote-text row"> Quality means doing it right when no one is looking.<br/> ~ Henry Ford </h1>
+
+  <section class="services-section">
+    <div class="row">
+      <h2 class="services-title"> SERVICES </h2>
+    </div>
+    <div class="services row">
+      <div class="col span-1-of-3">
+        <i class="ion-android-laptop icon-big"></i>
+        <div class="services-box">
+          <h3 class="services-block-title"> Web Design & Development </h3>
+          <ul class="services-block-item">
+            <li> Fully responsive website <span class="ion-ios-checkmark-empty"></span></li>
+            <li> Customized Wordpress - CMS <span class="ion-ios-checkmark-empty"></span></li>
+            <li> PSD to HTML <span class="ion-ios-checkmark-empty"></span></li>
+            <li> Functional Web Apps <span class="ion-ios-checkmark-empty"></span></li>
+          </ul>
         </div>
-      </header>
+      </div>
+      <div class="col span-1-of-3">
+        <i class="ion-android-settings icon-big"></i>
+        <div class="services-box">
+          <h3 class="services-block-title"> SEO & SMO </h3>
+          <ul class="services-block-item">
+            <li> Google Adwords - PPC <span class="ion-ios-checkmark-empty"></span></li>
+            <li> Google Analytics <span class="ion-ios-checkmark-empty"></span></li>
+            <li> Site Raking <span class="ion-ios-checkmark-empty"></span></li>
+          </ul>
+        </div>
+      </div>
+      <div class="col span-1-of-3">
+        <i class="ion-android-checkbox-outline icon-big"></i>
+        <div class="services-box">
+          <h3 class="services-block-title"> Site maintenence & Redesign </h3>
+          <ul class="services-block-item">
+            <li> Logo Designing <span class="ion-ios-checkmark-empty"></span></li>
+            <li> UX consultation <span class="ion-ios-checkmark-empty"></span></li>
+            <li> Domain and Hosting setups <span class="ion-ios-checkmark-empty"></span></li>
+            <li> Email campaigning <span class="ion-ios-checkmark-empty"></span></li>
+            <li> Security checks and upgrades <span class="ion-ios-checkmark-empty"></span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="process row">
+      <h2 class="process-title"> Building Process </h2>
+      <ul class="process-list">
+        <li class="process-item"> Research </li>
+        <li class="process-item"> Planning </li>
+        <li class="process-item"> Design </li>
+        <li class="process-item"> Development </li>
+        <li class="process-item"> Testing & Delivery </li>
+        <li class="process-item"> Maintenance <span class="ion-android-checkmark-circle"> </span></li>
+      </ul>
+    </div>
+  </section>
 
-  <script src="/js/jquery-3.2.1.js"> </script>
+  <script src="/js/jquery-3.2.1.js">
+  </script>
   <script src="/js/index.js"></script>
 </body>
 
