@@ -24,7 +24,7 @@ gulp.task('style', function(){
   gulp.src('app/resources/sass/**/*.sass')
     .pipe(sass().on('error', sass.logError))
     .on('error', console.error.bind(console))
-    .pipe(autoPrefixer('last 2 versions'))
+    // .pipe(autoPrefixer('last 2 versions'))
     .pipe(gulp.dest('app/css/'))
     .pipe(reload({stream:true}));
 });

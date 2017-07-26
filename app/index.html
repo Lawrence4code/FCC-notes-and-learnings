@@ -8,16 +8,19 @@
   <title>Lawrence CODE Studio</title>
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/grid.css">
-  <link rel="stylesheet" href="css/ionicons.min.css" />
-  <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" />
-  <link rel="stylesheet" href="css/style.css" />
-  <link href="https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,700" rel="stylesheet" />
+  <link rel="stylesheet" href="css/ionicons.min.css">
+  <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,700" rel="stylesheet">
 </head>
 
 <body>
   <header class="site-header">
-    <nav class="row">
-      <img class="site-logo" src="/img/logo-white.png" alt="Lawrence CODE Studio Logo">
+    <nav class="navbar row">
+      <a href="#">
+        <img class="site-logo-white" src="/img/LogoLCSWhite.png" alt="Lawrence CODE Studio Logo">
+        <img class="site-logo-black" src="/img/LogoLCSBlack.png" alt="Lawrence CODE Studio Logo">
+      </a>
 
       <div class="site-header__menu-icon">
         <span></span>
@@ -28,10 +31,10 @@
       <div class="site-header__menu-content">
         <ul class=site-header__main-nav>
           <li class="home"> <a href="#"> Home </a> </li>
-          <li class="foundation"> <a href="#"> Foundation </a> </li>
-          <li class="services"> <a href="#"> Services </a> </li>
-          <li class="project"> <a href="#"> Projects </a> </li>
-          <li class="contact"> <a href="#"> Contact </a> </li>
+          <li class="foundation-link"> <a href="#"> Foundation </a> </li>
+          <li class="services-link"> <a href="#"> Services </a> </li>
+          <li class="projects-link"> <a href="#"> Projects </a> </li>
+          <!-- <li class="contact-link"> <a href="#"> Contact </a> </li> -->
         </ul>
       </div>
     </nav>
@@ -42,12 +45,12 @@
     </div>
   </header>
 
-  <section class="foundation">
+  <section class="foundation-section">
     <div class="row">
-      <h2 class="foundation-title"> BUILD STRONG BASEN ON...</h2>
+      <h2 class="foundation-title"> BUILT STRONG BASEN ON...</h2>
     </div>
     <div class="foundation-section-text row">
-      <div class="col span-1-of-4 box">
+      <div class="foundation-block">
         <i class="ion-code-working icon-big"></i>
         <h3 class="foundation-block-title"> Code </h3>
         <p class="foundation-block-text">
@@ -55,7 +58,7 @@
         </p>
       </div>
 
-      <div class="col span-1-of-4 box">
+      <div class="foundation-block">
         <i class="ion-ios-pulse-strong icon-big"></i>
         <h3 class="foundation-block-title"> Optimization </h3>
         <p class="foundation-block-text">
@@ -63,7 +66,7 @@
         </p>
       </div>
 
-      <div class="col span-1-of-4 box">
+      <div class="foundation-block">
         <i class="ion-compose icon-big"></i>
         <h3 class="foundation-block-title"> Design </h3>
         <p class="foundation-block-text">
@@ -71,7 +74,7 @@
         </p>
       </div>
 
-      <div class="col span-1-of-4 box">
+      <div class="foundation-block">
         <i class="ion-ios-heart icon-big"></i>
         <h3 class="foundation-block-title"> Experience </h3>
         <p class="foundation-block-text">
@@ -87,9 +90,9 @@
       <h2 class="services-title"> SERVICES </h2>
     </div>
     <div class="services row">
-      <div class="col span-1-of-3">
+      <div>
         <i class="ion-android-laptop icon-big"></i>
-        <div class="services-box">
+        <div class="services-block">
           <h3 class="services-block-title"> Web Design & Development </h3>
           <ul class="services-block-item">
             <li> Fully responsive website <span class="ion-ios-checkmark-empty"></span></li>
@@ -99,7 +102,7 @@
           </ul>
         </div>
       </div>
-      <div class="col span-1-of-3">
+      <div>
         <i class="ion-android-settings icon-big"></i>
         <div class="services-box">
           <h3 class="services-block-title"> SEO & SMO </h3>
@@ -110,7 +113,7 @@
           </ul>
         </div>
       </div>
-      <div class="col span-1-of-3">
+      <div>
         <i class="ion-android-checkbox-outline icon-big"></i>
         <div class="services-box">
           <h3 class="services-block-title"> Site maintenence & Redesign </h3>
@@ -124,22 +127,186 @@
         </div>
       </div>
     </div>
-    <div class="process row">
-      <h2 class="process-title"> Building Process </h2>
-      <ul class="process-list">
-        <li class="process-item"> Research </li>
-        <li class="process-item"> Planning </li>
-        <li class="process-item"> Design </li>
-        <li class="process-item"> Development </li>
-        <li class="process-item"> Testing & Delivery </li>
-        <li class="process-item"> Maintenance <span class="ion-android-checkmark-circle"> </span></li>
+    <div class="process-vertical row">
+      <h2 class="process-vertical-title"> Building Process </h2>
+      <ul class="process-vertical-list">
+        <li class="process-vertical-item"> Research </li>
+        <li class="process-vertical-item"> Planning </li>
+        <li class="process-vertical-item"> Design </li>
+        <li class="process-vertical-item"> Development </li>
+        <li class="process-vertical-item"> Testing & Delivery </li>
+        <li class="process-vertical-item"> Maintenance <span class="ion-android-checkmark-circle"> </span></li>
+      </ul>
+    </div>
+    <div class="process-horizontal row">
+      <h2 class="process-horizontal-title"> Building Process </h2>
+      <ul class="process-horizontal-list">
+        <li class="process-horizontal-item"> Research <span class="ion-android-arrow-dropright"> </span> </li>
+        <li class="process-horizontal-item"> Planning <span class="ion-android-arrow-dropright"> </span> </li>
+        <li class="process-horizontal-item"> Design <span class="ion-android-arrow-dropright"> </span> </li>
+        <li class="process-horizontal-item"> Development <span class="ion-android-arrow-dropright"> </span></li>
+        <li class="process-horizontal-item"> Testing & Delivery <span class="ion-android-arrow-dropright"> </span></li>
+        <li class="process-horizontal-item"> Maintenance <span class="ion-android-checkmark-circle"> </span></li>
       </ul>
     </div>
   </section>
 
+  <section class="projects-section">
+    <div class="row">
+      <h2 class="projects-title"> PROJECTS & TOOLBELT </h2>
+    </div>
+    <div class="projects">
+      <div class="projects-slider">
+        <div class="cycle-slideshow" data-cycle-fx="scrollHorz" data-cycle-pause-on-hover="true" data-cycle-speed="100" data-cycle-caption="#alt-caption" data-cycle-caption-template="{{alt}}" data-cycle-swipe=true data-cycle-swipe-fx=scrollHorz>
+          <div class="cycle-overlay"></div>
+          <div class="cycle-prev"></div>
+          <div class="cycle-next"></div>
+          <img class="slider-image" src="/img/pro1.jpg" alt="#" data-cycle-title="Project One" data-cycle-desc="">
+          <img class="slider-image" src="/img/pro2.jpg" alt="#" data-cycle-title="Project Two" data-cycle-desc="">
+          <img class="slider-image" src="/img/pro3.jpg" alt="#" data-cycle-title="Project Three" data-cycle-desc="">
+          <img class="slider-image" src="/img/pro4.jpg" alt="#" data-cycle-title="Project Four" data-cycle-desc="">
+        </div>
+      </div>
+      <div class="toolbelt-section row">
+        <div class="toolbelt">
+          <i class="ion-social-wordpress toolbelt-icon"></i>
+          <div class="toolbelt-block">
+            <h3 class="toolbelt-block-title"> Wordpress  </h3>
+          </div>
+        </div>
+
+        <div class="toolbelt">
+          <i class="ion-social-github toolbelt-icon"></i>
+          <div>
+            <h3 class="toolbelt-block-title"> Github </h3>
+          </div>
+        </div>
+        <div class="toolbelt">
+          <i class="ion-social-html5 toolbelt-icon"></i>
+          <div>
+            <h3 class="toolbelt-block-title"> HTML5 </h3>
+          </div>
+        </div>
+        <div class="toolbelt">
+          <i class="ion-social-nodejs toolbelt-icon"></i>
+          <div>
+            <h3 class="toolbelt-block-title"> nodeJS</h3>
+          </div>
+        </div>
+        <div class="toolbelt">
+          <i class="ion-social-css3 toolbelt-icon"></i>
+          <div>
+            <h3 class="toolbelt-block-title"> CSS3 </h3>
+          </div>
+        </div>
+        <div class="toolbelt">
+          <i class="ion-social-javascript toolbelt-icon"></i>
+          <div>
+            <h3 class="toolbelt-block-title"> Javascript </h3>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="testimonials-section">
+    <div class="row">
+      <h2 class="testimonials-title"> Some of the great people I worked with... </h2>
+    </div>
+    <div class="testimonials row">
+      <div class="testimonials-block">
+        <blockquote>
+          Adipiscing elit. Suspendisse at enim sed purus ornare bibendum. Sed semper purus mi, at varius lectus sollicitudin ac. Curabitur libero erat, cursus ut mattis a, vehicula in magna.
+          <cite><img src="/img/customer-1.jpg" alt="Client Paul Ingram's photo"> Paul Ingram </cite>
+        </blockquote>
+      </div>
+      <div class="testimonials-block">
+        <blockquote>
+          Suspendisse at enim sed purus ornare bibendum. Sed semper purus mi, at varius lectus sollicitudin ac. Curabitur libero erat, cursus ut mattis a, vehicula in magna.
+          <cite><img src="/img/customer-2.jpg" alt="Client Gwen Taylor's photo"> Gwen Taylor </cite>
+        </blockquote>
+      </div>
+      <div class="testimonials-block">
+        <blockquote>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse at enim sed purus ornare bibendum. Sed semper purus mi, at varius lectus sollicitudin ac. Curabitur libero erat, cursus ut mattis a, vehicula in magna.
+          <cite><img src="/img/customer-3.jpg" alt="Client Micheal Switzer's photo"> Micheal Switzer </cite>
+        </blockquote>
+      </div>
+    </div>
+  </section>
+  <section class="form-section">
+    <div class="row">
+      <h2 class="form-title"> Happy to hear from you...</h2>
+    </div>
+    <div class="form-block row">
+      <form method="post" action="#" class="contact-form">
+
+        <div class="row">
+          <div>
+            <label for="name"> Name: </label>
+          </div>
+          <div>
+            <input type="text" name="name" id="name" placeholder="Your name" required>
+          </div>
+        </div>
+        <div class="row">
+          <div>
+            <label for="email"> Email: </label>
+          </div>
+          <div>
+            <input type="email" name="email" id="email" placeholder="Your email" required>
+          </div>
+        </div>
+        <div class="row">
+          <div>
+            <label for="message"> Drop a line: </label>
+          </div>
+          <div>
+            <textarea name="message" id="message" placeholder="Your message"></textarea>
+          </div>
+        </div>
+
+        <div class="row">
+          <div>
+            <label> &nbsp; </label>
+          </div>
+          <div>
+            <input class="btn-submit" type="submit" value="Send it">
+          </div>
+        </div>
+      </form>
+    </div>
+  </section>
+  <footer>
+    <div class="row">
+      <div class="aboutme">
+        <h3 class="aboutme-title"> About me </h3>
+        <p class="aboutme-text"> I am a self taught Web Developer and Lifetime Learner.<br>Building and designing since 2014.Born and raised in New Delhi, India. Big time Pet & Nature Lover and committed to my Love for Life. I like challenges, learning new technologies and a
+          big Google maniac. And I firmly believe that Quality outweigh Quantity when it comes to my work. </p>
+        <p class="imp-text"> IMP NOTICE - CURRENTLY NOT TAKING NEW PROJECTS, ASSISTING EXISTING CLIENTS AT MY BEST. </p>
+        <div class="social-icons">
+          <ul class="social-links">
+            <li> <a href="#"><i class="ion-social-facebook"> </i></a> </li>
+            <li> <a href="#"><i class="ion-social-twitter"> </i></a> </li>
+            <li> <a href="#"><i class="ion-social-linkedin"> </i></a> </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <p class="copy-right-info">
+        Copyright &copy; 2017 Lawrence CODE Studio. All rights reserved.
+      </p>
+    </div>
+  </footer>
+
   <script src="/js/jquery-3.2.1.js">
   </script>
+  <script src="/js/jquery.waypoints.min.js">
+  </script>
+  <script src="/js/waypoint.js">
+  </script>
   <script src="/js/index.js"></script>
+  <script src="/js/Cycle2.js"></script>
 </body>
 
 </html>
