@@ -1,0 +1,15 @@
+{
+  "name": "FCC-notes-and-learnings",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "dev": "parcel src/index.html"
+  },
+  "repository": "https://github.com/Lawrence4code/udacity-lcs-project.git",
+  "author": "Lawrence <Lawrence4code@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "parcel-bundler": "^1.10.3",
+    "sass": "^1.14.3"
+  }
+}
