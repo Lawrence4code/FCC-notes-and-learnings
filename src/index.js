@@ -1,3 +1,6 @@
 import './styles.scss';
 
-console.log('index.js initiated');
+// individual problems
+// import './record_collection';
+// import './/iterate_through_all';
+import './basicDataStructures';
