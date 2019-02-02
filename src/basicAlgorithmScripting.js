@@ -360,3 +360,66 @@ let wrap2 = wrapValue(2);
 //   console.log(`${chickenString} Chickens`);
 // }
 // printFarmInventory(7, 11);
+
+// function titleCase(str) {
+//   const stringArray = str.toLowerCase().split(' ');
+//   console.log(stringArray);
+//   const result = stringArray.map(element => {
+//     return element.replace(element.charAt(0), element.charAt(0).toUpperCase());
+//   });
+//   return result.join(' ');
+// }
+
+// console.log(titleCase("I'm a little tea pot"));
+
+// function titleCase1(str) {
+//   const stringArray = str.toLowerCase().split(' ');
+//   for (let i = 0; i < stringArray.length; i++) {
+//     stringArray[i] = stringArray[i].replace(
+//       stringArray[i].charAt(0),
+//       stringArray[i].charAt(0).toUpperCase()
+//     );
+//   }
+//   return stringArray.join(' ');
+// }
+
+// console.log(titleCase1('yello little tea pot'));
+
+// const arri = ['yellow', 'this', 'umbrella', 'jack', 'thinking'];
+// const newArray = [...arri];
+// for (let i = 0; i < arri.length; i++) {
+//   newArray.push(
+//     arri[i].replace(arri[i].charAt(0), arri[i].charAt(0).toUpperCase())
+//   );
+// }
+
+// console.log(arri);
+
+// https://learn.freecodecamp.org/javascript-algorithms-and-data-structures/basic-algorithm-scripting/slice-and-splice
+
+// my solution // works fine
+// function frankenSplice(arr1, arr2, n) {
+//   const newArray = [...arr2];
+//   newArray.splice(n, 0, ...arr1);
+
+//   return newArray;
+// }
+
+// console.log(frankenSplice([1, 2, 3], [4, 5], 1));
+
+// https://learn.freecodecamp.org/javascript-algorithms-and-data-structures/basic-algorithm-scripting/falsy-bouncer
+
+// my solution, works fine;
+// function bouncer(arr) {
+//   const newArr = [];
+//   arr.forEach(element => {
+//     // console.log(Boolean(element));
+//     // console.log(typeof Boolean(element));
+//     if (Boolean(element)) {
+//       newArr.push(element);
+//     }
+//   });
+//   return newArr;
+// }
+
+// console.log(bouncer([7, 'ate', '', false, 9]));
