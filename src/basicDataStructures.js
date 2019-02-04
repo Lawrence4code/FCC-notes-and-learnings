@@ -84,36 +84,36 @@
 
 // https://learn.freecodecamp.org/javascript-algorithms-and-data-structures/basic-data-structures/-iterate-through-the-keys-of-an-object-with-a-for---in-statement
 
-let users = {
-  Alan: {
-    age: 27,
-    online: false
-  },
-  Jeff: {
-    age: 32,
-    online: true
-  },
-  Sarah: {
-    age: 48,
-    online: false
-  },
-  Ryan: {
-    age: 19,
-    online: true
-  }
-};
+// let users = {
+//   Alan: {
+//     age: 27,
+//     online: false
+//   },
+//   Jeff: {
+//     age: 32,
+//     online: true
+//   },
+//   Sarah: {
+//     age: 48,
+//     online: false
+//   },
+//   Ryan: {
+//     age: 19,
+//     online: true
+//   }
+// };
 
-function countOnline(obj) {
-  let count = 0;
+// function countOnline(obj) {
+//   let count = 0;
 
-  for (let user in obj) {
-    if (obj[user].online === true) {
-      count = count + 1;
-    }
-  }
-  return count;
+//   for (let user in obj) {
+//     if (obj[user].online === true) {
+//       count = count + 1;
+//     }
+//   }
+//   return count;
 
-  // change code above this line
-}
+//   // change code above this line
+// }
 
-console.log(countOnline(users));
+// console.log(countOnline(users));

@@ -423,3 +423,15 @@ let wrap2 = wrapValue(2);
 // }
 
 // console.log(bouncer([7, 'ate', '', false, 9]));
+
+//learn.freecodecamp.org/javascript-algorithms-and-data-structures/basic-algorithm-scripting/where-do-i-belong/
+
+function getIndexToIns(arr, num) {
+  for (let i = 0; i < arr.length; i++) {
+    if (arr.sort[i]) {
+    }
+  }
+  return num;
+}
+
+getIndexToIns([40, 60], 50);
