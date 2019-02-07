@@ -426,12 +426,109 @@ let wrap2 = wrapValue(2);
 
 //learn.freecodecamp.org/javascript-algorithms-and-data-structures/basic-algorithm-scripting/where-do-i-belong/
 
+// function getIndexToIns(arr, num) {
+//   for( let i = 0; i < arr.length; i++) {
+//     if( arr[i] < num )
+
+//   }
+//   // return num;
+// }
+
+// console.log(getIndexToIns([40, 60], 50));
+// // console.log(getIndexToIns([10, 20, 30, 40, 50], 35));
+
+// https://learn.freecodecamp.org/javascript-algorithms-and-data-structures/basic-algorithm-scripting/mutations
+
+// Imp
+
+// function mutation(arr) {
+//   const array1 = arr[0].toLowerCase();
+//   const array2 = arr[1].toLowerCase().split('');
+//   for (let i = 0; i < array2.length; i++) {
+//     const checkIndex = array1.indexOf(array2[i]);
+//     if (checkIndex < 0) {
+//       return false;
+//     }
+//   }
+//   return true;
+// }
+// console.log(mutation(['Mary', 'Army']));
+
+// function mutation1(arr) {
+//   return arr[1]
+//     .toLowerCase()
+//     .split('')
+//     .every(letter => {
+//       return arr[0].toLowerCase().indexOf(letter) !== -1;
+//     });
+// }
+
+// console.log(mutation1(['Mary', 'Army']));
+
+// https://learn.freecodecamp.org/javascript-algorithms-and-data-structures/basic-algorithm-scripting/chunky-monkey
+
+// function chunkArrayInGroups(arr, size) {
+//   const newArr = [];
+//   for (let i = 0; i < arr.length; i += size) {
+//     newArr.push(arr.slice(i, i + size));
+//   }
+//   return newArr;
+// }
+
+// console.log(chunkArrayInGroups(['a', 'b', 'c', 'd'], 2));
+
+// function testingIII(arr) {
+//   for (let i = 0; i <= arr.length; i += 2) {
+//     console.log(i);
+//   }
+// }
+
+// testingIII([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]);
+
+// https://learn.freecodecamp.org/javascript-algorithms-and-data-structures/basic-algorithm-scripting/where-do-i-belong
+
 function getIndexToIns(arr, num) {
-  for (let i = 0; i < arr.length; i++) {
-    if (arr.sort[i]) {
-    }
-  }
+  // Find my place in this sorted array.
   return num;
 }
 
 getIndexToIns([40, 60], 50);
+
+// https://learn.freecodecamp.org/javascript-algorithms-and-data-structures/basic-javascript/counting-cards
+
+var count = 0;
+
+function cc(card) {
+  // Only change code below this line
+  switch (card) {
+    case 2:
+    case 3:
+    case 4:
+    case 5:
+    case 6:
+      count++;
+      break;
+    case 10:
+    case 10:
+    case 10:
+    case 10:
+    case 10:
+      count--;
+      break;
+  }
+
+  return 'Change Me';
+  // Only change code above this line
+}
+
+// Add/remove calls to test your function.
+// Note: Only the last will display
+cc(2);
+cc(3);
+cc(7);
+cc('K');
+cc('A');
+
+const name = 'string';
+
+console.log(name[0]);

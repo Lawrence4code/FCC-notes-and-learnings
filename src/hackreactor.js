@@ -170,29 +170,109 @@ For example, let's say the HR department adds a "tshirtSize" field to each emplo
 Starter Code :
 */
 
-function transformEmployeeData(array) {
-  const newArray = [];
-  const objectArray = {};
+// **** important
 
-  for (let i = 0; i < array.length; i++) {
-    for (let j = 0; j < array[i].length; j++) {
-      newArray.push((objectArray[array[i]] = array[i]));
-    }
-  }
-  console.log(objectArray);
-  return newArray;
-}
+// function transformEmployeeData(array) {
+//   const newArray = [];
+
+//   for (let i = 0; i < array.length; i++) {
+//     const objectArray = {};
+//     for (let j = 0; j < array[i].length; j++) {
+//       objectArray[array[i][j][0]] = array[i][j][1];
+//     }
+//     newArray.push(objectArray);
+//   }
+
+//   return newArray;
+// }
 
 // console.log(
-transformEmployeeData([
-  [['firstName', 'Joe'], ['lastName', 'Blow'], ['age', 42], ['role', 'clerk']],
-  [
-    ['firstName', 'Mary'],
-    ['lastName', 'Jenkins'],
-    ['age', 36],
-    ['role', 'manager']
-  ]
-]);
+//   transformEmployeeData([
+//     [
+//       ['firstName', 'Joe'],
+//       ['lastName', 'Blow'],
+//       ['age', 42],
+//       ['role', 'clerk']
+//     ],
+//     [
+//       ['firstName', 'Mary'],
+//       ['lastName', 'Jenkins'],
+//       ['age', 36],
+//       ['role', 'manager']
+//     ]
+//   ])
+// );
+
+// function transformEmployeeData1(array) {
+//   const newArray = [];
+
+//   return array.map(a => {
+//     const newObj = {};
+//     a.map(b => {
+//       newObj[b[0]] = b[1];
+//     });
+//     return newObj;
+//   });
+
+//   return newArray;
+// }
+
+// console.log(
+//   transformEmployeeData1([
+//     [
+//       ['firstName', 'Joe'],
+//       ['lastName', 'Blow'],
+//       ['age', 42],
+//       ['role', 'clerk']
+//     ],
+//     [
+//       ['firstName', 'Mary'],
+//       ['lastName', 'Jenkins'],
+//       ['age', 36],
+//       ['role', 'manager']
+//     ]
+//   ])
 // );
 
 // --------------------------------------------------------------------------------------------------------------------------------
+
+/*
+Write  a function called "convertObjectToList" which converts an object literal into an array of arrays, like this:
+Argument:
+{
+  name: 'Holly',
+  age: 35,
+  role: 'producer'
+}
+Return value:
+[['name', 'Holly'], ['age', 35], ['role', 'producer']]
+
+Note that your function should be able to handle ANY object like this, not just the exact sample provided above.
+
+E.g., it should also be able to handle this, or any other object containing simple key-value pairs.
+{
+  species: 'canine',
+  name: 'Bowser',
+  weight: 45
+}
+
+Starter Code:
+*/
+
+// function convertObjectToList(obj) {
+//   const arr = [];
+
+//   for (let i = 0; i <= 1; i++) {
+//     arr.push(obj[i]);
+//   }
+
+//   return arr;
+// }
+
+// console.log(
+//   convertObjectToList({
+//     name: 'Holly',
+//     age: 35,
+//     role: 'producer'
+//   })
+// );
