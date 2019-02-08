@@ -86,3 +86,30 @@ function add2(bookList, bookName) {
 
   // Add your code above this line
 }
+
+// Question 5
+
+// solution works in vscode but does solve in FCC ???
+
+// https://learn.freecodecamp.org/javascript-algorithms-and-data-structures/functional-programming/sort-an-array-alphabetically-using-the-sort-method
+
+// function alphabeticalOrder(arr) {
+//   // Add your code below this line
+//   return arr.sort((a, b) => {
+//     return a > b;
+//   });
+//   // Add your code above this line
+// }
+// console.log(alphabeticalOrder(['a', 'd', 'c', 'a', 'z', 'g']));
+
+// Question 6
+
+// I know little JS but when question is asked, I get confused, what the best way to prepare of such question.
+
+// Learniing
+// variable declaration and initialization
+// function expression and declaratiron
+// object and function, object in javascript
+// var are hoisted and let is not hoisted
+
+// strings are immutable, the split method makes it easier to work with them.
