@@ -318,56 +318,38 @@ if (firstName === 'Joe') {
 Starter Code :
 */
 
-var customerData = {
-  Joe: {
-    visits: 1
-  },
-  Carol: {
-    visits: 2
-  },
-  Howard: {
-    visits: 3
-  },
-  Carrie: {
-    visits: 4
-  }
-};
+// var customerData = {
+//   Joe: {
+//     visits: 1
+//   },
+//   Carol: {
+//     visits: 2
+//   },
+//   Howard: {
+//     visits: 3
+//   },
+//   Carrie: {
+//     visits: 4
+//   }
+// };
 
-function greetCustomer(firstName) {
-  var greeting = '';
-  if (customerData[firstName]) {
-    if (customerData[firstName].visits > 1) {
-      return `Welcome back, ${firstName}! So glad to see you again!`;
-    } else {
-      return `Welcome back, ${firstName}! We're glad you liked us the first time!`;
-    }
-  } else {
-    return 'Welcome! Is this your first time?';
-  }
+// function greetCustomer(firstName) {
+//   var greeting = '';
+//   if (customerData[firstName]) {
+//     if (customerData[firstName].visits > 1) {
+//       return `Welcome back, ${firstName}! So glad to see you again!`;
+//     } else {
+//       return `Welcome back, ${firstName}! We're glad you liked us the first time!`;
+//     }
+//   } else {
+//     return 'Welcome! Is this your first time?';
+//   }
 
-  return greeting;
-}
+//   return greeting;
+// }
 
 // console.log(greetCustomer('Carrie'));
 // console.log(greetCustomer('Joe'));
 // console.log(greetCustomer('Mark'));
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-// var fruitCount = { Apple: 1, Orange: 1, Brinjal: 10, Kiwi: 11 }
-
-// result = [{ nameOfFruit: "Apple", howMany: 1 }, {}, {}, {}]
-
-const fruitCount = { Apple: 1, Orange: 1, Brinjal: 10, Kiwi: 11 };
-
-function changeFruitCountFormat(obj) {
-  const fruitCountArray = [];
-  for (let i in obj) {
-    fruitCountArray.push({ nameOfFruit: i, howMany: obj[i] });
-  }
-  return fruitCountArray;
-}
-
-// console.log(
-//   changeFruitCountFormat({ Apple: 1, Orange: 1, Brinjal: 10, Kiwi: 11 })
-// );

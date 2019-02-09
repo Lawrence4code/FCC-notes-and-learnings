@@ -9,5 +9,6 @@ import './styles.scss';
 // import './functionalProgramming';
 // import './intermediateAlgorithmScripting';
 import './hackreactor';
-import './hardtime';
+// import './hardtime';
+import './mdn';
 // import './algods-sg';
