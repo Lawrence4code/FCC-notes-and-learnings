@@ -132,3 +132,109 @@ function add2(bookList, bookName) {
 // https://codepen.io/Lawrence4code/pen/mvXKjG
 // https://codepen.io/Lawrence4code/pen/LqQrKd
 // https://codepen.io/Lawrence4code/pen/NoyBdx
+
+// 4 rules
+
+// ------------------------------------------------------------------------------------------------------------------------ //
+
+// https://codepen.io/Lawrence4code/pen/LqmMoP
+// Write a function called "repeatString".
+
+// Given a string and a number, "repeatString" returns the given string repeated the given number of times.
+
+var output = repeatString('code', 3);
+
+function repeatString(string, num) {
+  if (num < 0) return;
+  if (num === 1) return string;
+  return string + repeatString(string, num - 1);
+}
+
+console.log(output); // --> 'codecodecode'
+
+// ------------------------------------------------------------------------------------------------------------------------ //
+
+// Write a function called "computeCompoundInterest".
+
+// Given a principal, an interest rate, a compounding frequency, and a time(in years), "computeCompoundInterest" returns the amount of compound interest generated.
+
+//   Reference:
+// https://en.wikipedia.org/wiki/Compound_interest#Calculation_of_compound_interest
+// This shows the formula used to calculate the total compound interest generated.
+// * /
+
+var output = computeCompoundInterest(1500, 0.043, 4, 6);
+
+function computeCompoundInterest(
+  principal,
+  interestRate,
+  compoundingFrequency,
+  timeInYears
+) {
+  return (
+    principal *
+    Math.pow(
+      1 + interestRate / (compoundingFrequency * 100),
+      compoundingFrequency * timeInYears
+    )
+  );
+}
+
+console.log(output); // --> 438.8368221341061
+
+// -------------------------------------------------------------------------------------------------------------------- //
+
+// https://codepen.io/Lawrence4code/pen/yZjway
+/*
+Write a function called "modulo".
+
+Given 2 numbers, "modulo" returns the remainder after dividing num1 by num2.
+
+It should behave as described in the canonical documentation (MDN) for the JavaScript remainder operator:
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators#Remainder_()
+
+Notes:
+* Do NOT use the actual built-in modulo (aka "remainder") operator (%) in your implementation.
+* 0 % ANYNUMBER = 0.
+* ANYNUMBER % 0 = NaN.
+* If either operand is NaN, then the result is NaN.
+* Modulo always returns the sign of the first number.
+
+*/
+
+// var output = modulo(25, 4);
+
+// function modulo(num1, num2) {
+//   if (num1 === NaN || num1 === NaN) {
+//     return NaN;
+//   }
+//   if (num1 === 0) {
+//     return 0;
+//   }
+
+//   if (num2 > num1) {
+//     return num1;
+//   }
+
+//   if (num1 === num2) return num1;
+
+//   num1 -= num2;
+
+//   return num1 - modulo(num1, num2);
+// }
+
+// function modulo(num1, num2) {
+//   if (num1 === NaN || num1 === NaN) {
+//     return NaN;
+//   }
+//   if (num1 === 0) {
+//     return 0;
+//   }
+//   while (num1 > num2) {
+//     num1 -= num2;
+//   }
+//   return num1;
+// }
+
+// console.log(output); // --> 1
+// -------------------------------------------------------------------------------------------------------------------- //

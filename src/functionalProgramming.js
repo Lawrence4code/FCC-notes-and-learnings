@@ -291,23 +291,23 @@ console.log('Functional Programming');
 // // the global Array
 // var s = [23, 65, 98, 5];
 
-// Array.prototype.myFilter = function(callback) {
-//   var newArray = [];
-//   // Add your code below this line
-//   this.forEach(item => {
-//     if (callback(item) === true) {
-//       newArray.push(item);
-//     }
-//   });
-//   // Add your code above this line
-//   return newArray;
-// };
+Array.prototype.myFilter = function(callback) {
+  var newArray = [];
+  // Add your code below this line
+  this.forEach(item => {
+    if (callback(item) === true) {
+      newArray.push(item);
+    }
+  });
+  // Add your code above this line
+  return newArray;
+};
 
-// var new_s = s.myFilter(function(item) {
-//   return item % 2 === 1;
-// });
+var new_s = s.myFilter(function(item) {
+  return item % 2 === 1;
+});
 
-// console.log(new_s);
+console.log(new_s);
 
 // https://learn.freecodecamp.org/javascript-algorithms-and-data-structures/functional-programming/return-part-of-an-array-using-the-slice-method
 

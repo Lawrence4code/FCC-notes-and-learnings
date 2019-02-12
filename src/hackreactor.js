@@ -1,6 +1,7 @@
 import { object } from 'prop-types';
 
-import './hackreactorm1';
+// import './hackreactorm1';
+import './hackreactorm2';
 
 // https://prep.hackreactor.com/courses/118569/lectures/3427339
 

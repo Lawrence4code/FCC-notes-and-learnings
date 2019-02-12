@@ -1,6 +1,7 @@
 import './styles.scss';
 
 // individual problems
+// import './FCCarticle.js';
 // import './record_collection';
 // import './/iterate_through_all';
 // import './basicDataStructures';
@@ -10,5 +11,7 @@ import './styles.scss';
 // import './intermediateAlgorithmScripting';
 import './hackreactor';
 // import './hardtime';
-import './mdn';
+// import './mdn';
 // import './algods-sg';
+// import './propelTasks.js';
+// import './articlesNote';
