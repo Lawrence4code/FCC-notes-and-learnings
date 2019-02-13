@@ -2,23 +2,10 @@ console.log(
   '------------------------------- ALGODS SG -------------------------------'
 );
 
-// https://www.udemy.com/coding-interview-bootcamp-algorithms-and-data-structure/learn/v4/t/lecture/8533052?start=0
+// create a function same which compares two array and checks if the values are squared
+// same ([1,2,3], [9,1,4]); true
+// same ([1,2,1],[2,4,4]) false
+// same ([1,2,3], [1,2]) false
 
-// Reverse String
-function reverse(str) {
-  return str.split('').reverse();
-}
-
-console.log(reverse('Hello').join(''));
-
-function reverse1(str) {
-  strArray = str.split('');
-  const reversedArray = [];
-  const strLength = strArray.length;
-  for (let i = 1; i <= strArray.length; i++) {
-    reversedArray.push(strArray[strLength - i]);
-  }
-  return reversedArray.join('');
-}
-
-console.log(reverse1('Hello'));
+// anagram
+// uniqie value in array
