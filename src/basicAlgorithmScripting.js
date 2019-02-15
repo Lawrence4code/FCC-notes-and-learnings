@@ -252,8 +252,13 @@ console.log('Basic Algorithm Scripting');
 // function truncateString(str, num) {
 //   // Clear out that junk in your trunk
 //   if (str.length > num && num > 3) {
-//     return str.slice(0, num - 3) + '...';
+//     console.log('met');
+//     return str.slice(0, num) + '...';
 //   } else if (str.length > num && num <= 3) {
+//     console.log('met');
+//     return str.slice(0, num) + '...';
+//   } else if (str.length > num) {
+//     console.log('met');
 //     return str.slice(0, num) + '...';
 //   } else {
 //     return str;
@@ -261,6 +266,21 @@ console.log('Basic Algorithm Scripting');
 // }
 
 // console.log(truncateString('A-tisket a-tasket A green and yellow basket', 8));
+// console.log(truncateString('Peter Piper picked a peck of pickled peppers', 11));
+// console.log(
+//   truncateString(
+//     'A-tisket a-tasket A green and yellow basket',
+//     'A-tisket a-tasket A green and yellow basket'.length
+//   )
+// );
+// console.log(
+//   truncateString(
+//     'A-tisket a-tasket A green and yellow basket',
+//     'A-tisket a-tasket A green and yellow basket'.length + 2
+//   )
+// );
+// console.log(truncateString('A-', 1));
+// console.log(truncateString('Absolutely Longer', 2));
 
 // https://learn.freecodecamp.org/javascript-algorithms-and-data-structures/basic-algorithm-scripting/finders-keepers
 
@@ -319,12 +339,12 @@ console.log('Basic Algorithm Scripting');
 
 // functional example from eloquant js
 
-function wrapValue(n) {
-  let local = n;
-  return () => local;
-}
-let wrap1 = wrapValue(1);
-let wrap2 = wrapValue(2);
+// function wrapValue(n) {
+//   let local = n;
+//   return () => local;
+// }
+// let wrap1 = wrapValue(1);
+// let wrap2 = wrapValue(2);
 
 // console.log(wrap1());
 
@@ -427,16 +447,37 @@ let wrap2 = wrapValue(2);
 //learn.freecodecamp.org/javascript-algorithms-and-data-structures/basic-algorithm-scripting/where-do-i-belong/
 
 // function getIndexToIns(arr, num) {
-//   for( let i = 0; i < arr.length; i++) {
-//     if( arr[i] < num )
-
+//   const sortedArr = arr.sort((a, b) => a - b);
+//   console.log(sortedArr);
+//   if (sortedArr.length === 0) {
+//     return 0;
 //   }
-//   // return num;
+//   for (let i = 0; i <= sortedArr.length; i++) {
+//     console.log('met');
+//     if (sortedArr[i] > num) {
+//       console.log(sortedArr[i]);
+//       sortedArr.splice(sortedArr.indexOf(sortedArr[i]), 0, num);
+//       break;
+//     }
+//     if (sortedArr[i] < num) {
+//       sortedArr.push(num);
+//     }
+//   }
+//   return sortedArr.indexOf(num);
+// }
+// console.log(getIndexToIns([5, 3, 20, 3], 5));
+// console.log(getIndexToIns([2, 20, 10], 19));
+
+// function getIndexToIns(arr, num) {
+//   const sortedArr = arr.sort((a, b) => a - b);
+//   console.log(sortedArr);
+
+//   return num;
 // }
 
-// console.log(getIndexToIns([40, 60], 50));
-// // console.log(getIndexToIns([10, 20, 30, 40, 50], 35));
+// getIndexToIns([40, 60], 50);
 
+// getIndexToIns([2, 20, 10], 19) should return 2
 // https://learn.freecodecamp.org/javascript-algorithms-and-data-structures/basic-algorithm-scripting/mutations
 
 // Imp
@@ -487,48 +528,138 @@ let wrap2 = wrapValue(2);
 
 // https://learn.freecodecamp.org/javascript-algorithms-and-data-structures/basic-algorithm-scripting/where-do-i-belong
 
-function getIndexToIns(arr, num) {
-  // Find my place in this sorted array.
-  return num;
-}
-
-getIndexToIns([40, 60], 50);
-
 // https://learn.freecodecamp.org/javascript-algorithms-and-data-structures/basic-javascript/counting-cards
 
-var count = 0;
+// var count = 0;
 
-function cc(card) {
-  // Only change code below this line
-  switch (card) {
-    case 2:
-    case 3:
-    case 4:
-    case 5:
-    case 6:
-      count++;
-      break;
-    case 10:
-    case 10:
-    case 10:
-    case 10:
-    case 10:
-      count--;
-      break;
+// function cc(card) {
+//   // Only change code below this line
+//   switch (card) {
+//     case 2:
+//     case 3:
+//     case 4:
+//     case 5:
+//     case 6:
+//       count++;
+//       break;
+//     case 10:
+//     case 10:
+//     case 10:
+//     case 10:
+//     case 10:
+//       count--;
+//       break;
+//   }
+
+//   return 'Change Me';
+//   // Only change code above this line
+// }
+
+// // Add/remove calls to test your function.
+// // Note: Only the last will display
+// cc(2);
+// cc(3);
+// cc(7);
+// cc('K');
+// cc('A');
+
+// const name = 'string';
+
+// console.log(name[0]);
+
+// ------------------------------------------------------------------------------------------------------ //
+
+// Setup
+// var collection = {
+//   '2548': {
+//     album: 'Slippery When Wet',
+//     artist: 'Bon Jovi',
+//     tracks: ['Let It Rock', 'You Give Love a Bad Name']
+//   },
+//   '2468': {
+//     album: '1999',
+//     artist: 'Prince',
+//     tracks: ['1999', 'Little Red Corvette']
+//   },
+//   '1245': {
+//     artist: 'Robert Palmer',
+//     tracks: []
+//   },
+//   '5439': {
+//     album: 'ABBA Gold'
+//   }
+// };
+// Keep a copy of the collection for tests
+// var collectionCopy = JSON.parse(JSON.stringify(collection));
+
+// function updateRecords(id, prop, value) {
+//   //   If prop isn't "tracks" and value isn't empty(""), update or set the value for that record album's property.
+//   if (prop !== 'tracks' && value !== '') {
+//     console.log('met');
+//     collection[id][prop] = value;
+//   } else if (prop === 'tracks' && value !== '') {
+//     console.log('met');
+//     if (collection[id].hasOwnProperty(prop)) {
+//       console.log('met');
+//       collection[id][prop].push(value);
+//     } else {
+//       console.log('met');
+//       collection[id][prop] = [value];
+//     }
+//   } else if (prop === 'artists' && value !== '') {
+//     console.log('met');
+//     collection[id][prop].push(value);
+//   }
+//   return collection;
+// }
+
+// // console.log(updateRecords(5439, 'tracks', 'Take a Chance on Me'));
+// console.log(updateRecords(2548, 'tracks', ''));
+// console.log(updateRecords(2548, 'tracks', ''));
+
+// ------------------------------------------------------------------------------------------------------ //
+
+//Setup
+var contacts = [
+  {
+    firstName: 'Akira',
+    lastName: 'Laine',
+    number: '0543236543',
+    likes: ['Pizza', 'Coding', 'Brownie Points']
+  },
+  {
+    firstName: 'Harry',
+    lastName: 'Potter',
+    number: '0994372684',
+    likes: ['Hogwarts', 'Magic', 'Hagrid']
+  },
+  {
+    firstName: 'Sherlock',
+    lastName: 'Holmes',
+    number: '0487345643',
+    likes: ['Intriguing Cases', 'Violin']
+  },
+  {
+    firstName: 'Kristian',
+    lastName: 'Vos',
+    number: 'unknown',
+    likes: ['JavaScript', 'Gaming', 'Foxes']
   }
+];
 
-  return 'Change Me';
-  // Only change code above this line
+function lookUpProfile(name, prop) {
+  for (let i in contacts) {
+    if (contacts[i].firstName === name) {
+      if (contacts[i].hasOwnProperty(prop)) {
+        return contacts[i][prop];
+      } else {
+        return 'No such property';
+      }
+    }
+  }
+  return 'No such contact';
 }
 
-// Add/remove calls to test your function.
-// Note: Only the last will display
-cc(2);
-cc(3);
-cc(7);
-cc('K');
-cc('A');
-
-const name = 'string';
-
-console.log(name[0]);
+// Change these values to test your function
+console.log(lookUpProfile('Akira', 'likes'));
+console.log(lookUpProfile('Kristian', 'lastName'));

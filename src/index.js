@@ -8,11 +8,14 @@ import './styles.scss';
 // import './basicAlgorithmScripting';
 // import './objectOrientedProgrammingChallenges';
 // import './functionalProgramming';
-import './intermediateAlgorithmScripting';
+// import './intermediateAlgorithmScripting';
+// import './fccAlgo&dsProjects';
 // import './hackreactor';
 // import './hardtime';
 // import './mdn';
 // import './algods-sg';
 // import './propelTasks.js';
-// import './articlesNote';
+// import './articlesNote';xz
 // import './GFG/gfg';
+// import './cashRegister';
+import './cashRegister1';
