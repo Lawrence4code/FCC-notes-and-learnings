@@ -20,7 +20,18 @@ function checkCashRegister(price, cash, cid) {
     acc += cur[1];
     return acc;
   }, 0);
-
+  if (totalCID < payBack) {
+    return {
+      status: 'INSUFFICIENT_FUNDS',
+      change: []
+    };
+  }
+  if (totalCID === payBack) {
+    return {
+      status: 'CLOSED',
+      change: cid
+    };
+  }
   // reverse cid
   let cidRev = cid.reverse();
 
@@ -29,14 +40,11 @@ function checkCashRegister(price, cash, cid) {
     if (payBack >= cur.value) {
       let currentValue = 0;
       while (payBack >= cur.value && cidRev[i][1] >= cur.value) {
-        console.log(currentValue);
         currentValue += cur.value;
         payBack -= cur.value;
         payBack = Math.round(payBack * 100) / 100;
         currentValue = Math.round(currentValue * 100) / 100;
-        console.log(cidRev[i][1]);
-        console.log(cur.value);
-        console.log(currentValue);
+
         cidRev[i][1] -= cur.value;
       }
       acc.push([cur.name, currentValue]);
@@ -45,32 +53,58 @@ function checkCashRegister(price, cash, cid) {
 
     return acc;
   }, []);
-
+  let count = 0;
+  let index = 0;
+  newCID.map((val, i) => {
+    // console.log(val, i)
+    if (val[1] > 0) {
+      count++;
+      index = i;
+    }
+  });
+  console.log(count, newCID[index]);
+  if (count === 1) {
+    if (newCID[index][1] < payBack) {
+      return {
+        status: 'INSUFFICIENT_FUNDS',
+        change: []
+      };
+    }
+  }
   // statements check
-  if (totalCID === payBack) {
-    status = 'CLOSED';
-    change = newCID;
-  } else if (totalCID > payBack) {
+  if (totalCID > payBack) {
     status = 'OPEN';
     change = newCID;
-  } else if (totalCID < payBack) {
-    status = 'INSUFFICIENT_FUNDS';
-    change = [];
   }
+  console.log(newCID.length);
 
   return { status: status, change: change };
 }
 
 console.log(
   checkCashRegister(19.5, 20, [
-    ['PENNY', 0.5],
+    ['PENNY', 0.01],
     ['NICKEL', 0],
     ['DIME', 0],
     ['QUARTER', 0],
-    ['ONE', 0],
+    ['ONE', 1],
     ['FIVE', 0],
     ['TEN', 0],
     ['TWENTY', 0],
     ['ONE HUNDRED', 0]
+  ])
+);
+
+console.log(
+  checkCashRegister(3.26, 100, [
+    ['PENNY', 1.01],
+    ['NICKEL', 2.05],
+    ['DIME', 3.1],
+    ['QUARTER', 4.25],
+    ['ONE', 90],
+    ['FIVE', 55],
+    ['TEN', 20],
+    ['TWENTY', 60],
+    ['ONE HUNDRED', 100]
   ])
 );

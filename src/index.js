@@ -18,4 +18,5 @@ import './styles.scss';
 // import './articlesNote';xz
 // import './GFG/gfg';
 // import './cashRegister';
-import './cashRegister1';
+// import './cashRegister1';
+import './ipProject';
