@@ -45,3 +45,4 @@ public/dist/
 src/playground
 .env.test
 .env.development
+src/ipProject.txt
